@@ -34,7 +34,6 @@ function makeGrid(gridHeight, gridWidth) {
 };
 
 // applying color to pixel art maker 
-
 canvas.addEventListener('click', function (event) {
     if(event.target.style.backgroundColor) {
         event.target.style.backgroundColor = ''; 
