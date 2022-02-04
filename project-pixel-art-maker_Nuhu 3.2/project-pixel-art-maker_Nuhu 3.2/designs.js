@@ -11,14 +11,22 @@ const canvas = document.getElementById('pixelCanvas');
 // When size is submitted by the user, call makeGrid()
 tableSize.addEventListener('submit', function (event) {
     event.preventDefault();
-    let gridHeight = document.getElementById('inputHeight').value;
-    let gridWidth = document.getElementById('inputWidth').value;
+    const gridHeight = document.getElementById('inputHeight').value;
+    const gridWidth = document.getElementById('inputWidth').value;
     makeGrid(gridHeight, gridWidth);
 
-   //console.log('Grid Height:' + gridHeight + 'Grid Width: ' + gridWidth);
+   /* *
+    * console.log('Grid Height:' + gridHeight + 'Grid Width: ' + gridWidth);
+    * Used console.log in Developer tools to test if 'Submit' button was working properly 
+    */
+   
 });
 
-// creating table Grid from Height and width values
+/** 
+ * creating table Grid from squares
+ * Input from Grid width provides number of squares representing width of grid
+ * Input from Grid height provides number of squares representing height of grid
+ */
 
 function makeGrid(gridHeight, gridWidth) {
     canvas.innerHTML = '';
@@ -31,7 +39,7 @@ function makeGrid(gridHeight, gridWidth) {
         canvas.appendChild(row);
     }
 
-};
+}
 
 // applying color to pixel art maker 
 canvas.addEventListener('click', function (event) {
